@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% if current_user.is_authenticated %}
+        <h1>Авторизован</h1>
+    {% else %}
+        <h1>Не авторизован</h1>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+
+{% block header %}<link rel="stylesheet" href="./static/style.css">{% endblock %}
+
+{% block content %}
+
+<h1>Ethereum</h1>
+
+<div class="tradingview-widget-container">
+  <div id="tradingview_ef947"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/ETHUSDT/?exchange=BINANCE" rel="noopener" target="_blank"><span class="blue-text">Курс ETHUSDT</span></a> от TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+  new TradingView.MediumWidget(
+  {
+  "symbols": [
+    [
+      "Ethereum",
+      "BINANCE:ETHUSDT|12M"
+    ]
+  ],
+  "chartOnly": false,
+  "width": 1000,
+  "height": 500,
+  "locale": "ru",
+  "colorTheme": "dark",
+  "gridLineColor": "rgba(42 ,46, 57, 0)",
+  "fontColor": "#787B86",
+  "isTransparent": false,
+  "autosize": false,
+  "showVolume": false,
+  "scalePosition": "no",
+  "scaleMode": "Normal",
+  "fontFamily": "-apple-system, BlinkMacSystemFont, Trebuchet MS, Roboto, Ubuntu, sans-serif",
+  "noTimeScale": false,
+  "valuesTracking": "1",
+  "chartType": "line",
+  "container_id": "tradingview_ef947"
+}
+  );
+  </script>
+  <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/symbols/BTCUSDT/technicals/" rel="noopener" target="_blank"><span class="blue-text">Технический анализ BTCUSDT</span></a> от TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-technical-analysis.js" async>
+  {
+  "interval": "1m",
+  "width": "1000",
+  "isTransparent": false,
+  "height": "450",
+  "symbol": "BINANCE:ETHUSDT",
+  "showIntervalTabs": true,
+  "locale": "ru",
+  "colorTheme": "light"
+}
+  </script>
+</div>
+</div>
+{% endblock %}
