@@ -171,8 +171,8 @@ def reqister():
 def info_coin(name_coin, currency, do, nums):
     url = 'https://pro-api.coinmarketcap.com/v2/cryptocurrency/quotes/latest'
     parameters = {
-        'slug': f'{name_coin}',
-        'convert': f'{currency}'
+        'slug': name_coin,
+        'convert': currency
     }
     headers = {
         'Accepts': 'application/json',
