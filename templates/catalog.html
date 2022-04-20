@@ -9,11 +9,6 @@
         <div class="in-block"><a href="catalog/bitcoin"><h3>Bitcoin/BTC</h3></a>
         <h6>Цена в данный момент: {{price_btc}}$</h6>
         <h6>Объем торгов: {{value_btc}}</h6>
-         {% if volume_change_24h_btc < 0 %}
-            <h6 style="color: red;">Изменение цены за 24 часа: {{volume_change_24h_btc}}</h6>
-         {% else %}
-            <h6 style="color: green;">Изменение цены за 24 часа: {{volume_change_24h_btc}}</h6>
-         {% endif %}
           </div>
           <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
@@ -37,14 +32,9 @@
         </div>
       </div>
       <div class="ETH-block">
-        <div class="in-block"><a href="catalog/bitcoin"><h3>Ethereum/ETH</h3></a>
+        <div class="in-block"><a href="catalog/ethereum"><h3>Ethereum/ETH</h3></a>
         <h6>Цена в данный момент: {{price_eth}}$</h6>
         <h6>Объем торгов: {{value_eth}}</h6>
-         {% if volume_change_24h_eth < 0 %}
-            <h6 style="color: red;">Изменение цены за 24 часа: {{volume_change_24h_eth}}</h6>
-         {% else %}
-            <h6 style="color: green;">Изменение цены за 24 часа: {{volume_change_24h_eth}}</h6>
-         {% endif %}
           </div>
           <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>
@@ -68,14 +58,9 @@
         </div>
       </div>
       <div class="USDT-block">
-        <div class="in-block"><a href="catalog/bitcoin"><h3>USDT</h3></a>
+        <div class="in-block"><a href="catalog/tether"><h3>USDT</h3></a>
         <h6>Цена в данный момент: {{price_usdt}}$</h6>
         <h6>Объем торгов: {{value_usdt}}</h6>
-         {% if volume_change_24h_usdt < 0 %}
-            <h6 style="color: red;">Изменение цены за 24 часа: {{volume_change_24h_usdt}}</h6>
-         {% else %}
-            <h6 style="color: green;">Изменение цены за 24 часа: {{volume_change_24h_usdt}}</h6>
-         {% endif %}
           </div>
           <div class="tradingview-widget-container">
           <div class="tradingview-widget-container__widget"></div>

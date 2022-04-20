@@ -4,7 +4,7 @@ from wtforms.fields import EmailField
 from wtforms.validators import DataRequired
 
 
-class OfficeForm(FlaskForm):
+class ProfileForm(FlaskForm):
     name = StringField('Имя', validators=[DataRequired()])
     submit = SubmitField('Сохранить')
     surname = StringField('Фамилия')

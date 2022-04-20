@@ -24,9 +24,8 @@
       <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
         <li><a href="/" class="nav-link px-2 link-secondary">Главная</a></li>
         <li><a href="/catalog" class="nav-link px-2 link-dark">Каталог</a></li>
-        <li><a href="#" class="nav-link px-2 link-dark">Избранное</a></li>
+        <li><a href="/faq" class="nav-link px-2 link-dark">FAQs</a></li>
         <li><a href="/news" class="nav-link px-2 link-dark">Новости</a></li>
-        <li><a href="/info" class="nav-link px-2 link-dark">О нас</a></li>
       </ul>
       {% if current_user.is_anonymous %}
       <div style='display: flex; flex-direction: row; justify-content: center;' class="col-md-3 text-end">
@@ -42,7 +41,7 @@
         <form action="/logout">
             <button style='margin-right: 10px;' type="submit" class="btn btn-primary">Выйти</button>
         </form>
-        <form action="/office">
+        <form action="/profile">
             <button style='margin-right: 10px;' type="submit" class="btn btn-primary">Мой профиль</button>
         </form>
       </div>
@@ -59,9 +58,8 @@
     <ul class="nav justify-content-center border-bottom pb-3 mb-3">
       <li class="nav-item"><a href="/" class="nav-link px-2 text-muted">Главная</a></li>
       <li class="nav-item"><a href="/catalog" class="nav-link px-2 text-muted">Каталог</a></li>
-      <li class="nav-item"><a href="/favorite" class="nav-link px-2 text-muted">Избранное</a></li>
+      <li class="nav-item"><a href="/faq" class="nav-link px-2 text-muted">FAQs</a></li>
       <li class="nav-item"><a href="/news" class="nav-link px-2 text-muted">Новости</a></li>
-      <li class="nav-item"><a href="/info" class="nav-link px-2 text-muted">О нас</a></li>
     </ul>
     <p class="text-center text-muted">© 2022 Company, Inc</p>
   </footer>

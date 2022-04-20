@@ -2,8 +2,22 @@
 
 {% block content %}
     {% if current_user.is_authenticated %}
-        <h1>Авторизован</h1>
+        <div class="tradingview-widget-container">
+  <div class="tradingview-widget-container__widget"></div>
+  <div class="tradingview-widget-copyright"><a href="https://ru.tradingview.com/markets/cryptocurrencies/prices-all/" rel="noopener" target="_blank"><span class="blue-text">Рынки криптовалют</span></a> предоставлены TradingView</div>
+  <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-screener.js" async>
+  {
+  "width": "1000",
+  "height": "1000",
+  "defaultColumn": "overview",
+  "screener_type": "crypto_mkt",
+  "displayCurrency": "USD",
+  "colorTheme": "light",
+  "locale": "ru"
+}
+  </script>
+</div>
     {% else %}
-        <h1>Не авторизован</h1>
+        <h1>Войдите в систему!</h1>
     {% endif %}
 {% endblock %}

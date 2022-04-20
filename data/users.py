@@ -21,9 +21,7 @@ class User(SqlAlchemyBase, UserMixin, SerializerMixin):
     hashed_password = sqlalchemy.Column(sqlalchemy.String)
     modified_date = sqlalchemy.Column(sqlalchemy.DateTime, default=datetime.datetime.now)
     city_from = sqlalchemy.Column(sqlalchemy.String)
-    habit = sqlalchemy.Column(sqlalchemy.String)  # id_1;id_2
 
-    habits = orm.relation("Habits", back_populates='user')
     news = orm.relation("News", back_populates='user')
     comments = orm.relation("Comments", back_populates='user')
 

@@ -35,7 +35,5 @@ class News(SqlAlchemyBase, UserMixin, SerializerMixin):
                                      default=get_date(datetime.datetime.now()))
     user_id = sqlalchemy.Column(sqlalchemy.Integer,
                                 sqlalchemy.ForeignKey("users.id"))
-    comms = sqlalchemy.Column(sqlalchemy.String)  # id_1;id_2
+    comms = sqlalchemy.Column(sqlalchemy.String)
     user = orm.relation('User')
-
-    # categories = orm.relation("Category", secondary="association", backref="news")
