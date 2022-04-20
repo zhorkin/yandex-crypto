@@ -4,6 +4,13 @@ from .news import News
 from flask import jsonify
 
 
+class NewsListResource(Resource):
+    def get(self):
+        session = db_session.create_session()
+        user = session.query(News).all()
+        return jsonify({'news': [item.to_dict(
+            only=('id', 'title', 'content', 'created_date', 'user_id', 'comms')) for item in user]})
+
 def abort_if_user_not_found(news_id):
     session = db_session.create_session()
     news = session.query(News).get(news_id)
@@ -20,9 +27,4 @@ class NewsResource(Resource):
             only=('id', 'title', 'content', 'created_date', 'user_id', 'comms'))})
 
 
-class NewsListResource(Resource):
-    def get(self):
-        session = db_session.create_session()
-        user = session.query(News).all()
-        return jsonify({'news': [item.to_dict(
-            only=('id', 'title', 'content', 'created_date', 'user_id', 'comms')) for item in user]})
+

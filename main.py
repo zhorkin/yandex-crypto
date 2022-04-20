@@ -237,8 +237,8 @@ def get_date(date):
     date = str(date)[:10]
     date_list = date.split('-')
     return (day_list[int(date_list[2]) - 1] + ' ' +
-        month_list[int(date_list[1]) - 1] + ' ' +
-        date_list[0] + ' года')
+            month_list[int(date_list[1]) - 1] + ' ' +
+            date_list[0] + ' года')
 
 
 @app.route("/profile", methods=['GET', 'POST'])
