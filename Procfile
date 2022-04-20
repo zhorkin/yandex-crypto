@@ -1,1 +1,1 @@
-web: gunicorn app:app heroku git:clone -a yandex-cryptocurrency
+web: gunicorn main:app heroku git:clone -a yandex-cryptocurrency
