@@ -17,14 +17,22 @@ from werkzeug.utils import redirect
 from wtforms import PasswordField, BooleanField, SubmitField
 from wtforms.fields import EmailField
 from wtforms.validators import DataRequired
-from data import db_session
+from data import db_session, user_resources, news_resources, comments_resources
 from data.comments import Comments
 import json
+from flask_restful import Api, abort
 from requests import Session
 
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'yandexlyceum_secret_key'
+api = Api(app)
+api.add_resource(user_resources.UsersResource, '/api/v1/users/<int:users_id>')
+api.add_resource(user_resources.UsersListResource, '/api/v1/users')
+api.add_resource(news_resources.NewsResource, '/api/v1/news/<int:news_id>')
+api.add_resource(news_resources.NewsListResource, '/api/v1/news')
+api.add_resource(comments_resources.CommentsResource, '/api/v1/comments/<int:comments_id>')
+api.add_resource(comments_resources.CommentsListResource, '/api/v1/comments')
 db_session.global_init("db/user.db")
 db_sess = db_session.create_session()
 login_manager = LoginManager()
