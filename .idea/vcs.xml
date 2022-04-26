@@ -3,5 +3,6 @@
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/yandex-cryptocurrency" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/yandex-cryptocurrency/yandex-cryptocurrency" vcs="Git" />
   </component>
 </project>
