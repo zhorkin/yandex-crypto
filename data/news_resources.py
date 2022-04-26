@@ -15,7 +15,7 @@ def abort_if_user_not_found(news_id):
     session = db_session.create_session()
     news = session.query(News).get(news_id)
     if not news:
-        abort(404, message=f"New {news_id} not found")
+        abort(404, message=f"Новость с id {news_id} не найдена")
 
 
 class NewsResource(Resource):

@@ -8,7 +8,7 @@ def abort_if_user_not_found(com_id):
     session = db_session.create_session()
     news = session.query(Comments).get(com_id)
     if not news:
-        abort(404, message=f"Comment {com_id} not found")
+        abort(404, message=f"Комментарий с id {com_id} не найден")
 
 
 class CommentsResource(Resource):
